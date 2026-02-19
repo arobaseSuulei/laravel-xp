@@ -19,7 +19,7 @@
 </head>
 <body>
 
-<h1 class="text-red-500">hey guys</h1>
+<h1 class="text-red-500">well done to about</h1>
 
 
 <a href="/about">about</a>

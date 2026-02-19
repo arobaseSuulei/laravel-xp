@@ -22,8 +22,13 @@
 <h1 class="text-red-500">page contact</h1>
 
 
-<a href="/about">back to about</a>
-<a href="/">back to home</a>
+<p>
+    <a href="/about">back to about</a>
+</p>
+<p>
+    <a href="/">back to home</a>
+
+</p>
 
 
 </body>

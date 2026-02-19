@@ -23,6 +23,7 @@
 
 
 <a href="/about">about</a>
+<a href="/">back to home</a>
 
 
 </body>

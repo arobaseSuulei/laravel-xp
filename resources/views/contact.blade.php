@@ -19,15 +19,11 @@
 </head>
 <body>
 
-<h1 class="text-red-500">hey guys</h1>
+<h1 class="text-red-500">page contact</h1>
 
 
-<a href="/about">about</a>
-<p>
-    <a href="/contact">contact us</a>
-</p>
-
-
+<a href="/about">back to about</a>
+<a href="/">back to home</a>
 
 
 </body>

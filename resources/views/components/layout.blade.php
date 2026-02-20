@@ -18,6 +18,10 @@
     @endif
 </head>
 <body>
+<h1>hey</h1>
+
+<h1>layout did that</h1>
+
 
 {{$slot}}
 

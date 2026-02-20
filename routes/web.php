@@ -12,5 +12,7 @@ Route::get('/about', function () {
 });
 
 
+
+
 // une autre façon de faire les views
 Route::view('/contact','contact');

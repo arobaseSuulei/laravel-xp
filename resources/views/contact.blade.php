@@ -1,4 +1,4 @@
-<x-layout>
+<x-layout title="contact" type="je  suis a contact">
     <h1 class="text-red-500">page contact</h1>
 
 

@@ -1,4 +1,4 @@
-<x-layout>
+<x-layout title="about">
     <h1 class="text-red-500">well done to about</h1>
 
 

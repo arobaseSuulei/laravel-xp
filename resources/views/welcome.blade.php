@@ -1,5 +1,5 @@
-<x-layout>
-    <h1 class="text-red-500">hey guys</h1>
+<x-layout title="omg" type="hihihi">
+    <h1 class="text-red-500">hey guys }</h1>
 
 
 

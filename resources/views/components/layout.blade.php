@@ -1,9 +1,20 @@
+@props(
+    [
+        'title'=>'mon app',
+        'type'=>'texto'
+    ]
+)
+
+
+
+
+
 <!doctype html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Document</title>
+    <title>{{$title}}</title>
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.bunny.net">
     <link href="https://fonts.bunny.net/css?family=instrument-sans:400,500,600" rel="stylesheet" />
@@ -18,9 +29,9 @@
     @endif
 </head>
 <body>
-<h1>hey</h1>
+<h1>hello world  {{$type}} </h1>
 
-<h1>layout did that</h1>
+
 
 
 {{$slot}}

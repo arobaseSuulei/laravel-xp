@@ -28,7 +28,7 @@
         </style>
     @endif
 </head>
-<body>
+<body class="p-16">
 <h1>hello world  {{$type}} </h1>
 
 

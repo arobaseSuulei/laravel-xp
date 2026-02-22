@@ -1,7 +1,7 @@
 @props(
     [
         'title'=>'mon app',
-        'type'=>'texto'
+        'info'=>'you just need to write about your ideas'
     ]
 )
 
@@ -19,6 +19,7 @@
     <link rel="preconnect" href="https://fonts.bunny.net">
     <link href="https://fonts.bunny.net/css?family=instrument-sans:400,500,600" rel="stylesheet" />
 
+
     <!-- Styles / Scripts -->
     @if (file_exists(public_path('build/manifest.json')) || file_exists(public_path('hot')))
         @vite(['resources/css/app.css', 'resources/js/app.js'])
@@ -29,7 +30,20 @@
     @endif
 </head>
 <body class="p-16">
-<h1>hello world  {{$type}} </h1>
+
+<div class="flex gap-2 mb-6" >
+    <a href="/" > home </a>
+    <a href="/contact" > contact </a>
+    <a href="/about" > about </a>
+    <a href="/ideas" > the app </a>
+
+</div>
+
+
+<p class="text-2xl ">The ideas note  </p>
+<p class=" ">{{$info}} </p>
+
+
 
 
 

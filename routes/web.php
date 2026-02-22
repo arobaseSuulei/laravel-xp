@@ -4,11 +4,10 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
 
-    $ideas = session()->get('ideas', []);
+    $ideas=DB::table('anime')->get();
 
     return view('welcome', [
-        'greeting' => 'hello',
-        'person' => request('person', 'world'),
+
         'ideas' => $ideas // passage de la variable vers la vue
     ]);
 });
@@ -20,7 +19,7 @@ Route::get('/about', function () {
 
 Route::get('/ideas', function () {
 
-    $ideas = session()->get('ideas','nothing');
+    $ideas=DB::table('anime')->get();
     return view('ideas', [
         'ideas'=>$ideas // passage de la variable vers la vue
     ]);
@@ -28,7 +27,7 @@ Route::get('/ideas', function () {
 
 Route::post('/ideas', function () {
     $idea = request('idea');
-    session()->push('ideas',$idea);
+     session()->push('ideas',$idea);
 
     return redirect('/');
 });

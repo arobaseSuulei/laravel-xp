@@ -19,14 +19,16 @@
     </form>
 
 
-    <div class="mt-10">
-        <h2> Your ideas </h2>
-        @foreach($ideas as $idea)
 
-            <li> {{$idea}} </li>
+        <div class="mt-10">
+            <h2> Your anime </h2>
+            @foreach($ideas as $idea)
 
-        @endforeach
-    </div>
+                <li> {{$idea->name}} </li>
+
+            @endforeach
+        </div>
+
 
 
 

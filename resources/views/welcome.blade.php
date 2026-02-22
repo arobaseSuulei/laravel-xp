@@ -1,6 +1,6 @@
 <x-layout title="home" info="">
 
-    <p > {{$greeting}},{{$person}}</p>
+    <p > </p>
 
     @php
         $message = "All your ideas here ?";
@@ -12,7 +12,7 @@
         <h2> Your ideas </h2>
         @foreach($ideas as $idea)
 
-            <li> {{$idea}} </li>
+            <li> {{$idea->name}} </li>
 
         @endforeach
     </div>

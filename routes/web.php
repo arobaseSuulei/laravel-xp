@@ -21,7 +21,7 @@ Route::get('/about', function () {
 Route::get('/ideas', function () {
 
     $ideas = session()->get('ideas','nothing');
-    return view('ideas',[
+    return view('ideas', [
         'ideas'=>$ideas // passage de la variable vers la vue
     ]);
 });

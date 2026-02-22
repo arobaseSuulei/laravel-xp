@@ -4,6 +4,9 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
 
+
+
+
     $ideas=DB::table('anime')->get();
 
     return view('welcome', [
@@ -28,6 +31,17 @@ Route::get('/ideas', function () {
 Route::post('/ideas', function () {
     $idea = request('idea');
      session()->push('ideas',$idea);
+
+    return redirect('/');
+});
+
+
+Route::get('/add_anime',function () {
+    DB::table('anime')->insert([
+        'name' => 'MHA',
+        'season' => 8,
+        'platform' => 'Crunchyroll'
+    ]);
 
     return redirect('/');
 });

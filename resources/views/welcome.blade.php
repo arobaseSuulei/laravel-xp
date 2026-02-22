@@ -12,7 +12,7 @@
         <h2> Your ideas </h2>
         @foreach($ideas as $idea)
 
-            <li> {{$idea->name}} </li>
+            <li> {{$idea->rating}} </li>
 
         @endforeach
     </div>

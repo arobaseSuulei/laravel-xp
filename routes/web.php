@@ -1,18 +1,24 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Models\Anime;
 
 Route::get('/', function () {
 
 
+    $idea=Anime::find(3);
+
+    return($idea);
 
 
-    $ideas=DB::table('anime')->get();
 
-    return view('welcome', [
 
-        'ideas' => $ideas // passage de la variable vers la vue
-    ]);
+    //$ideas=DB::table('anime')->get();
+
+    //return view('welcome', [
+
+      //  'ideas' => $ideas // passage de la variable vers la vue
+    //]);
 });
 
 Route::get('/about', function () {

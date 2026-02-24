@@ -6,9 +6,11 @@ use App\Models\Anime;
 Route::get('/', function () {
 
 
-    $idea=Anime::find(3);
+    $idea=Anime::all();
 
-    return($idea);
+    return view('welcome',[
+        'ideas'=>$idea,
+    ]);
 
 
 
@@ -28,18 +30,12 @@ Route::get('/about', function () {
 
 Route::get('/ideas', function () {
 
-    $ideas=DB::table('anime')->get();
+    $idea=Anime::all();
     return view('ideas', [
-        'ideas'=>$ideas // passage de la variable vers la vue
+        'ideas'=>$idea // passage de la variable vers la vue
     ]);
 });
 
-Route::post('/ideas', function () {
-    $idea = request('idea');
-     session()->push('ideas',$idea);
-
-    return redirect('/');
-});
 
 
 Route::get('/add_anime',function () {
@@ -53,6 +49,18 @@ Route::get('/add_anime',function () {
 });
 
 
+
+Route::post('/ideas', function () {
+    $anime = new Anime();
+
+    $anime->name = request('name');
+    $anime->season= request('season');
+    $anime->platform = request('platform');
+    $anime->save();
+
+
+    return redirect('/');
+});
 
 
 // une autre façon de faire les views

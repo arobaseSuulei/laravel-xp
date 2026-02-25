@@ -6,7 +6,9 @@ use App\Models\Anime;
 Route::get('/', function () {
 
 
-    $idea=Anime::all();
+    $idea=Anime::query()->when(request('season'),function ($query,$state){
+        $query->where('season',$state);
+    })->get();
 
     return view('welcome',[
         'ideas'=>$idea,
